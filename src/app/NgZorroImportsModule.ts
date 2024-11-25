@@ -9,6 +9,7 @@ import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzTimePickerModule } from 'ng-zorro-antd/time-picker';
 import { NzDatePickerModule} from 'ng-zorro-antd/date-picker';
 import { NzGridModule } from 'ng-zorro-antd/grid';
+import {NzTableModule} from 'ng-zorro-antd/table';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { NzGridModule } from 'ng-zorro-antd/grid';
     NzSelectModule,
     NzTimePickerModule,
     NzDatePickerModule,
-    NzGridModule
+    NzGridModule,
+    NzTableModule
     ]
 })
 

@@ -46,7 +46,7 @@ export class BookCarComponent {
 
   bookACar(data: any){
     console.log(data);
-    this.isSpinning=true;
+  //  this.isSpinning=true;
     let bookACarDto={
       toDate: data.toDate,
       fromDate: data.fromDate,
@@ -54,12 +54,14 @@ export class BookCarComponent {
       carId: this.carId
     }
 
-    this.service.bookACar(bookACarDto).subscribe((res)=>{
+    this.service.bookACar(this.carId,bookACarDto).subscribe((res)=>{
       console.log(res);
       this.message.success("Booking request submitted successfully", {nzDuration: 5000});
       this.router.navigateByUrl("/customer/dashboard");
+      this.isSpinning=false;
     },error=>{
       this.message.error("Something went wrong", { nzDuration: 5000});
+      this.isSpinning=false;
     })
   }
 }
